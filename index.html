@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanda Mobile Store</title>
+    <link rel="stylesheet" href="style.css">
+</<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">>
+<body>
+
+<div id="loader">Loading...</div>
+
+<header>
+    <h1>galazzz Mobile Store</h1>
+    <div class="cart">🛒 <span id="cart-count">0</span></div>
+    <input type="text" id="search" placeholder="Search products...">
+</header>
+
+<div class="slider">
+    <img id="slide" src="images/iphone.jpg">
+</div>
+
+<section class="hero">
+    <h2>Premium Phones, Clothes & Shoes</h2>
+    <p>Shop quality products at the best prices</p>
+</section>
+
+<div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('phones')">Phones</button>
+    <button onclick="filterProducts('clothes')">Clothes</button>
+    <button onclick="filterProducts('shoes')">Shoes</button>
+</div>
+
+<section class="products">
+
+<div class="product phones fade-in">
+    <span class="badge">HOT 🔥</span>
+    <img src="images/iphone.jpg">
+    <h3>Apple iPhone 11 – 64GB</h3>
+    <p>K6500</p>
+    <button onclick="openPopup('iPhone 11','6500','images/iphone.jpg')">View</button>
+</div>
+
+<div class="product phones fade-in">
+    <img src="images/samsung.jpg">
+    <h3>Samsung A14 – 128GB</h3>
+    <p>K3500</p>
+    <button onclick="openPopup('Samsung A14','3500','images/samsung.jpg')">View</button>
+</div>
+
+<div class="product clothes fade-in">
+    <img src="images/tshirt.jpg">
+    <h3>Premium T-Shirt</h3>
+    <p>K250</p>
+    <button onclick="openPopup('T-Shirt','250','images/tshirt.jpg')">View</button>
+</div>
+
+<div class="product shoes fade-in">
+    <img src="images/ps5pro.jpg">
+    <h3>ps5pro</h3>
+    <p>k13000</p>
+    <button onclick="openPopup('ps5pro','13000','images/ps5pro.jpg')">View</button>
+</div>
+
+</section>
+
+<section class="checkout">
+    <button onclick="checkout()">Checkout on WhatsApp</button>
+</section>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span onclick="closePopup()" class="close">&times;</span>
+        <img id="popup-img">
+        <h3 id="popup-name"></h3>
+        <p id="popup-price"></p>
+        <button onclick="addToCartFromPopup()">Add to Cart</button>
+    </div>
+</div>
+
+<footer>
+    <h3>galazzz Mobile Store</h3>
+    <p>Lusaka, Zambia</p>
+    <p>0977389867</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
